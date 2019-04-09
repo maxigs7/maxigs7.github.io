@@ -22,6 +22,16 @@ h6,
     margin: auto;
 }
 
+.text-center {
+    text-align: center;
+}
+.text-right {
+    text-align: right;
+}
+.clearfix {
+    overflow: auto;
+    zoom: 1;
+}
 /*****************************************************************************
 NAVBAR
 *****************************************************************************/
@@ -71,24 +81,112 @@ nav.navbar {
 }
 
 /*****************************************************************************
-NAVBAR
+CARD COMMON
 *****************************************************************************/
 .card {
     background: #fff;
     margin: 15px;
     padding: 15px;
     box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.5);
+    position: relative;
 }
 
+/*****************************************************************************
+ABOUT CARD
+*****************************************************************************/
+.about-card {
+    padding-bottom: 150px;
+}
+.profile-img {
+    height: 200px;
+    -webkit-clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+    clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+}
+
+.about-body {
+    margin-top: 10px;
+}
+
+.about-card .location {
+    font-size: 0.9rem;
+}
+
+.about-name {
+    font-size: 1.3rem;
+}
+.about-title {
+    font-size: 1.1rem;
+}
+.about-text {
+    font-size: 0.9rem;
+}
+.about-footer {
+    position: absolute;
+    bottom: 0;
+    background-color: #333;
+    left: 0;
+    width: 100%;
+    color: #fff;
+}
+
+.about-footer .socials {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    align-content: stretch;
+}
+.about-footer .socials-item {
+    width: 50%;
+    text-align: center;
+    display: flex;
+    height: 75px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.about-footer .socials-item .fa {
+    font-size: 2rem;
+}
+.about-footer .socials-item .social-text {
+    font-size: 0.75rem;
+    margin-top: 0.5rem;
+}
 /* Extra small devices (portrait phones, less than 576px)
 No media query for `xs` since this is the default in Bootstrap */
 
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
+    .profile-img {
+        -webkit-clip-path: polygon(0 0, 100% 0, 79% 100%, 0% 100%);
+        clip-path: polygon(0 0, 100% 0, 79% 100%, 0% 100%);
+    }
 }
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
+    .about-card {
+        padding-bottom: 90px;
+    }
+    .about-image {
+        float: left;
+        margin-right: 15px;
+    }
+
+    .about-card .location {
+        text-align: right;
+    }
+    .about-name,
+    .about-title {
+        text-align: left;
+    }
+    .about-footer .socials-item {
+        width: 25%;
+    }
 }
 
 /* Large devices (desktops, 992px and up) */
