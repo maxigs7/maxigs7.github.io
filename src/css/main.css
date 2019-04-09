@@ -1,39 +1,136 @@
 body {
-    background-color: #ccc;
+    background-color: #eee;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 17px;
 }
 
-.bg-top {
-    background-repeat: no-repeat;
-    background-image: url('../img/background.jpg');
-    background-size: cover;
-    background-position: 50% 50%;
-    min-height: 300px;
+/*****************************************************************************
+MY REBOOT
+*****************************************************************************/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.title {
+    font-family: 'Roboto', sans-serif;
 }
-/* header {
-    width: 100%;
-    min-height: 300px;
 
-    position: relative;
-} */
-/* .navbar {
-    background: white !important;
-    box-shadow: 0px 4px 8px 0px;
-} */
+.container {
+    max-width: 992px;
+    margin: auto;
+}
 
+/*****************************************************************************
+NAVBAR
+*****************************************************************************/
+nav.navbar {
+    background-color: #fff;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.5);
+    color: #333;
+    height: 70px;
+    position: sticky;
+}
+
+#burger {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-size: 2rem;
+    padding: 0.7rem 1.25rem;
+}
+
+#my-navbar {
+    background: #fff;
+    list-style: none;
+    box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.5);
+    padding: 0;
+    transform: scaleY(0);
+    transition: 0.5s transform ease;
+    transform-origin: top;
+}
+
+#my-navbar.collapse {
+    transform: scaleY(1);
+}
+
+#my-navbar.collapse .nav-item {
+    opacity: 1;
+}
 #my-navbar .nav-item {
-    font-weight: bold;
+    opacity: 0;
+    transition: 0.5s opacity ease;
+}
+
+#my-navbar .nav-link {
+    color: #333;
+    display: block;
+    padding: 1rem 1.5rem;
     text-transform: uppercase;
 }
-#my-navbar .nav-link {
-    padding-right: 1rem;
-    padding-left: 1rem;
+
+/*****************************************************************************
+NAVBAR
+*****************************************************************************/
+.card {
+    background: #fff;
+    margin: 15px;
+    padding: 15px;
+    box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.5);
 }
-/*
-.navbar {
-    background-color: white;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 80px;
-} */
+
+/* Extra small devices (portrait phones, less than 576px)
+No media query for `xs` since this is the default in Bootstrap */
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    header {
+        background-repeat: no-repeat;
+        background-image: url('../img/background.jpg');
+        background-size: cover;
+        background-position: 50% 50%;
+        min-height: 300px;
+        position: relative;
+    }
+
+    nav.navbar {
+        bottom: 0;
+        position: absolute;
+        width: 100%;
+    }
+
+    #burger {
+        display: none;
+    }
+
+    #my-navbar {
+        box-shadow: none;
+        display: flex;
+        transform: scaleY(1);
+        align-items: stretch;
+        justify-content: center;
+        height: 100%;
+    }
+
+    #my-navbar .nav-item {
+        opacity: 1;
+    }
+
+    #my-navbar .nav-link {
+        padding-bottom: 1.4rem;
+        padding-top: 1.4rem;
+    }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+}

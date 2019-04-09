@@ -29,8 +29,5 @@
         "webpack-cli": "^3.3.0",
         "webpack-dev-server": "^3.3.0"
     },
-    "dependencies": {
-        "mdbootstrap": "^4.7.6",
-        "normalize.css": "^8.0.1"
-    }
+    "dependencies": {}
 }
