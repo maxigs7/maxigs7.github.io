@@ -28,6 +28,11 @@ h6,
 .text-right {
     text-align: right;
 }
+
+.text-uppercase {
+    text-transform: uppercase;
+}
+
 .clearfix {
     overflow: auto;
     zoom: 1;
@@ -220,6 +225,36 @@ SKILLS CARD
 .language-item i {
     margin-top: 15px;
     font-size: 1.3rem;
+}
+
+/*****************************************************************************
+EXPERIENCE CARD
+*****************************************************************************/
+.card.experiences-card {
+    padding: 0;
+}
+
+.experiences-card .experience-info,
+.experiences-card .experience-description {
+    padding: 15px;
+}
+.experiences-card .experience-info {
+    background: #333;
+    color: #fff;
+}
+.experiences-card .experience-description {
+    padding: 15px;
+}
+
+.experiences-card .experience-time {
+    display: flex;
+}
+
+.experiences-card .experience-time-from,
+.experiences-card .experience-time-to {
+    display: flex;
+    flex-direction: column;
+    flex: 1 50%;
 }
 /* Extra small devices (portrait phones, less than 576px)
 No media query for `xs` since this is the default in Bootstrap */
