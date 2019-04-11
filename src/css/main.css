@@ -35,6 +35,12 @@ h6,
 /*****************************************************************************
 NAVBAR
 *****************************************************************************/
+body > header {
+    z-index: 100;
+    position: sticky;
+    top: 0;
+}
+
 nav.navbar {
     background-color: #fff;
     box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.5);
@@ -111,6 +117,7 @@ CARD COMMON
 }
 
 .card-title {
+    text-align: center;
     text-transform: uppercase;
 }
 
@@ -197,11 +204,31 @@ SKILLS CARD
     margin-right: 10px;
     position: relative;
 }
+
+.languages-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.language-item {
+    text-align: center;
+    margin: 10px;
+}
+
+.language-item i {
+    margin-top: 15px;
+    font-size: 1.3rem;
+}
 /* Extra small devices (portrait phones, less than 576px)
 No media query for `xs` since this is the default in Bootstrap */
 
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
+    .card-title {
+        text-align: left;
+    }
 }
 
 /* Medium devices (tablets, 768px and up) */
@@ -228,17 +255,23 @@ No media query for `xs` since this is the default in Bootstrap */
     .about-footer .socials-item {
         width: 25%;
     }
+    .languages-list {
+        flex-direction: row;
+        justify-content: space-around;
+        flex: 1 100%;
+    }
 }
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
-    header {
+    body > header {
         background-repeat: no-repeat;
         background-image: url('../img/background.jpg');
         background-size: cover;
         background-position: 50% 50%;
         min-height: 300px;
         position: relative;
+        top: auto;
     }
 
     nav.navbar {
@@ -279,6 +312,8 @@ No media query for `xs` since this is the default in Bootstrap */
 
     .card-column.languages {
         flex: 1 60%;
+        display: flex;
+        flex-direction: column;
     }
 }
 
