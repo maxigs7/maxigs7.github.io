@@ -12,15 +12,35 @@ $(function() {
         var $this = $(this);
         var from = $this.data('ago-from');
         var to = $this.data('ago-to');
+        var dateFrom = moment(from, 'MM/DD/YYYY');
+        var dateTo;
         var time;
-        if (to) {
-            time = moment(from, 'MM/DD/YYYY').from(
-                moment(to, 'MM/DD/YYYY'),
-                true
-            );
+        if (!to) {
+            dateTo = moment();
         } else {
-            time = moment(from, 'MM/DD/YYYY').fromNow(true);
+            dateTo = moment(to, 'MM/DD/YYYY');
         }
-        $this.text('(' + time + ')');
+        $this.text('(' + getTime(dateFrom, dateTo) + ')');
     });
+
+    function getDiff(dateFrom, dateTo) {
+        var year = dateTo.diff(dateFrom, 'year');
+        var month = dateTo.diff(dateFrom, 'month') - year * 12;
+        return {
+            year: year,
+            month: month
+        };
+    }
+
+    function getTime(dateFrom, dateTo) {
+        var diff = getDiff(dateFrom, dateTo);
+        var text = '';
+        if (diff.year == 1) text += 'YEAR ' + diff.year;
+        else if (diff.year > 1) text += 'YEARS ' + diff.year;
+
+        if (diff.month == 1) text += ' MONTH ' + diff.month;
+        else if (diff.month > 1) text += ' MONTHS ' + diff.month;
+
+        return text;
+    }
 });
