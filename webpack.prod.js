@@ -6,7 +6,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
-const buildPath = path.resolve(__dirname, '');
+const buildPath = path.resolve(__dirname, 'dist');
 
 module.exports = {
     // This option controls if and how source maps are generated.
@@ -21,8 +21,9 @@ module.exports = {
     // how to write the compiled files to disk
     // https://webpack.js.org/concepts/output/
     output: {
-        filename: '[name].[hash:20].js',
-        path: buildPath
+        filename: 'js/[name].[hash:20].js',
+        path: buildPath,
+        publicPath: '/dist/'
     },
 
     // https://webpack.js.org/concepts/loaders/
@@ -47,7 +48,7 @@ module.exports = {
                     {
                         loader: 'url-loader',
                         options: {
-                            name: '[name].[hash:20].[ext]',
+                            name: 'img/[name].[hash:20].[ext]',
                             limit: 8192
                         }
                     }
@@ -63,11 +64,11 @@ module.exports = {
             template: './src/page-index/tmpl.html',
             inject: 'body',
             chunks: ['index'],
-            filename: 'index.html'
+            filename: '../index.html'
         }),
         new MiniCssExtractPlugin({
-            filename: '[name].[contenthash].css',
-            chunkFilename: '[id].[contenthash].css'
+            filename: 'css/[name].[contenthash].css',
+            chunkFilename: 'css/[id].[contenthash].css'
         })
     ],
 

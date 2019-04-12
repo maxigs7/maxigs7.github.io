@@ -23,7 +23,7 @@
     crossorigin="anonymous"
 />
 
-    <link href="index.d8277b9553b999ea0bf2.css" rel="stylesheet"></head>
+    <link href="/dist/css/index.8e0c2ddd18c78447d4f1.css" rel="stylesheet"></head>
 
     <body>
         <header id="header">
@@ -37,10 +37,10 @@
                 <a class="nav-link" href="#About">About</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#Experience">Experience</a>
+                <a class="nav-link" href="#Skills">Skills</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#Skills">Skills</a>
+                <a class="nav-link" href="#Experience">Experience</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#Education">Education</a>
@@ -58,11 +58,11 @@
 </header>
 
         <div class="container">
-            <div class="card about-card clearfix">
+            <div class="card about-card clearfix" id="About">
     <div class="about-image text-center">
         <img
             class="profile-img"
-            src="profile.908bd9db85a6b1442d97.jpg"
+            src="/dist/img/profile.908bd9db85a6b1442d97.jpg"
             height="200px"
             alt="My profile picture"
         />
@@ -103,7 +103,7 @@
         </ul>
     </div>
 </div>
- <div class="card skills-card clearfix">
+ <div class="card skills-card clearfix" id="Skills">
     <div class="card-row">
         <div class="card-column skills">
             <h2 class="card-title">Skills</h2>
@@ -151,12 +151,62 @@
         </div>
     </div>
 </div>
+<div class="card experiences-card">
+    <div class="experience-info">
+        <div class="experience-time">
+            <div class="experience-time-from">
+                <strong>From</strong>
+                <span>Apr 2016</span>
+            </div>
+            <div class="experience-time-to">
+                <strong>To</strong>
+                <span>Present</span>
+            </div>
+        </div>
+        <div class="text-uppercase" data-ago-from="04/01/2016"></div>
+        <h2>Devlights Solutions</h2>
+        <div><i class="fa fa-map-marker-alt"></i> Corrientes, Argentina</div>
+    </div>
+    <div class="experience-description">
+        <p>Description</p>
+    </div>
+</div>
+
+<div class="card experiences-card">
+    <div class="experience-info">
+        <div class="experience-time">
+            <div class="experience-time-from">
+                <strong>From</strong>
+                <span>Jul 2012</span>
+            </div>
+            <div class="experience-time-to">
+                <strong>To</strong>
+                <span>Apr 2016</span>
+            </div>
+        </div>
+        <div
+            class="text-uppercase"
+            data-ago-from="07/01/2012"
+            data-ago-to="04/01/2016"
+        ></div>
+        <h2>Desarrollos NEA</h2>
+        <div><i class="fa fa-map-marker-alt"></i> Corrientes, Argentina</div>
+    </div>
+    <div class="experience-description">
+        <p>Description</p>
+    </div>
+</div>
 
         </div>
          <!-- JQuery -->
 <script
     type="text/javascript"
     src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"
+></script>
+<script
+    src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.js"
+    integrity="sha256-H9jAz//QLkDOy/nzE9G4aYijQtkLt9FvGmdUTwBk6gs="
+    crossorigin="anonymous"
 ></script>
 
 <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
@@ -176,5 +226,5 @@
     defer
 ></script>
 
-    <script type="text/javascript" src="index.f79f833f6d14f98d972f.js"></script></body>
+    <script type="text/javascript" src="/dist/js/index.ba68e74c18a114a3ce6b.js"></script></body>
 </html>
