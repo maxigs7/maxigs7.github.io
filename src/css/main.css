@@ -22,6 +22,10 @@ h6,
     margin: auto;
 }
 
+.container > .title {
+    margin-left: 15px;
+}
+
 .text-center {
     text-align: center;
 }
@@ -121,6 +125,7 @@ CARD COMMON
     position: relative;
 }
 
+.title,
 .card-title {
     text-align: center;
     text-transform: uppercase;
@@ -261,6 +266,7 @@ No media query for `xs` since this is the default in Bootstrap */
 
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
+    .title,
     .card-title {
         text-align: left;
     }
@@ -294,6 +300,13 @@ No media query for `xs` since this is the default in Bootstrap */
         flex-direction: row;
         justify-content: space-around;
         flex: 1 100%;
+    }
+    .card.experiences-card {
+        display: flex;
+    }
+    .experiences-card .experience-info {
+        flex: 1 1 40%;
+        font-size: 1rem;
     }
 }
 
@@ -349,6 +362,24 @@ No media query for `xs` since this is the default in Bootstrap */
         flex: 1 60%;
         display: flex;
         flex-direction: column;
+    }
+
+    .experiences-card {
+        display: flex;
+        position: relative;
+        margin-left: 70px;
+    }
+    .card.experiences-card:before {
+        content: '';
+        position: absolute;
+        background: transparent;
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        top: 50%;
+        margin-top: -12px;
+        left: -40px;
+        border: 7px solid #333;
     }
 }
 
