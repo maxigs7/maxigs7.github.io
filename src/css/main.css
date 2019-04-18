@@ -261,6 +261,28 @@ EXPERIENCE CARD
     flex-direction: column;
     flex: 1 50%;
 }
+
+/*****************************************************************************
+CERTIFICATES CARD
+*****************************************************************************/
+.card.certificates-card {
+    display: flex;
+    align-items: center;
+}
+
+.ceriticate-logo {
+    margin-right: 15px;
+}
+
+.certificate-body {
+    font-size: 1rem;
+    align-self: flex-start;
+}
+
+.certificate-title {
+    font-size: 1.1rem;
+}
+
 /* Extra small devices (portrait phones, less than 576px)
 No media query for `xs` since this is the default in Bootstrap */
 
@@ -380,6 +402,14 @@ No media query for `xs` since this is the default in Bootstrap */
         margin-top: -12px;
         left: -40px;
         border: 7px solid #333;
+    }
+
+    #Certificates {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .card.certificates-card {
+        flex: 1 0 40%;
     }
 }
 

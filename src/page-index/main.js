@@ -3,6 +3,15 @@ require('../css/main.css');
 require('./page.css');
 
 $(function() {
+    $('.nav-link').on('click', function(e) {
+        $('html, body').animate(
+            {
+                scrollTop: $(e.currentTarget.hash).offset().top
+            },
+            500
+        );
+    });
+
     $('#burger').on('click', function(e) {
         var target = $(this).data('target');
         $(target).toggleClass('collapse');
