@@ -268,12 +268,16 @@ CERTIFICATES CARD
 .card.certificates-card {
     display: flex;
     align-items: center;
+    flex-direction: column;
 }
 
-.ceriticate-logo {
-    margin-right: 15px;
+.certificate-logo {
+    margin-bottom: 15px;
 }
-
+.certificate-logo img {
+    max-height: 100px;
+    max-width: 100%;
+}
 .certificate-body {
     font-size: 1rem;
     align-self: flex-start;
@@ -291,6 +295,16 @@ No media query for `xs` since this is the default in Bootstrap */
     .title,
     .card-title {
         text-align: left;
+    }
+
+    .card.certificates-card {
+        flex-direction: row;
+    }
+
+    .certificate-logo {
+        flex: 0 0 100px;
+        margin-bottom: 0;
+        margin-right: 15px;
     }
 }
 
@@ -404,7 +418,7 @@ No media query for `xs` since this is the default in Bootstrap */
         border: 7px solid #333;
     }
 
-    #Certificates {
+    .certificates-cards {
         display: flex;
         flex-wrap: wrap;
     }
