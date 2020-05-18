@@ -1,0 +1,5 @@
+<p>certificates-list works!</p>
+
+<div *ngFor="let certificate of certificates$ | async as certficates">
+  {{ certificate.title.en }}
+</div>
