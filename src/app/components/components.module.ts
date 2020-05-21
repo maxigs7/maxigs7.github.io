@@ -6,18 +6,20 @@ import { CertificatesListComponent } from './certificates-list/certificates-list
 import { ExperiencesListComponent } from './experiences-list/experiences-list.component';
 import { SkillsListComponent } from './skills-list/skills-list.component';
 import { LanguagesListComponent } from './languages-list/languages-list.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 const components: any[] = [
-  AboutMeComponent,
-  CertificatesListComponent,
-  ExperiencesListComponent,
-  LanguagesListComponent,
-  SkillsListComponent,
+    AboutMeComponent,
+    CertificatesListComponent,
+    ExperiencesListComponent,
+    LanguagesListComponent,
+    SkillsListComponent,
+    NavbarComponent,
 ];
 
 @NgModule({
-  declarations: [...components],
-  imports: [CommonModule],
-  exports: [...components],
+    declarations: [...components],
+    imports: [CommonModule],
+    exports: [...components],
 })
 export class ComponentsModule {}

@@ -1,0 +1,17 @@
+.app-container {
+    color: #fff;
+    display: flex;
+    height: 100%;
+
+    .image-bg {
+        background: black;
+        min-width: 500px;
+        width: 500px;
+    }
+
+    .app-content-wrapper {
+        background: #3c3c3c;
+        padding: 20px 10px;
+        width: 100%;
+    }
+}
