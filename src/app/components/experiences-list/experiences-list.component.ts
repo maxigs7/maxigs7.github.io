@@ -1,22 +1,19 @@
-import { Component, OnInit } from '@angular/core';
-import { select, Store } from '@ngrx/store';
-import {
-  selectExperiences,
-  IAppState,
-  loadExperiences,
-} from 'src/app/core/store/index';
+import { Component, ChangeDetectionStrategy, Input } from '@angular/core';
+import { IExperience } from 'src/app/models';
 
 @Component({
   selector: 'app-experiences-list',
   templateUrl: './experiences-list.component.html',
   styleUrls: ['./experiences-list.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class ExperiencesListComponent implements OnInit {
-  experiences$ = this.store.pipe(select(selectExperiences));
+export class ExperiencesListComponent {
+  @Input()
+  experiences: IExperience[] = [];
 
-  constructor(private store: Store<IAppState>) {}
+  constructor() {}
 
-  ngOnInit(): void {
-    this.store.dispatch(loadExperiences());
+  trackBy(experience: IExperience): string {
+    return experience.id;
   }
 }

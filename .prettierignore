@@ -1,0 +1,5 @@
+/**/*.json
+**/api/**
+**polyfills.ts
+/**/*.ftl
+/**/*.html

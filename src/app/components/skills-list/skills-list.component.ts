@@ -1,18 +1,19 @@
-import { Component, OnInit } from '@angular/core';
-import { select, Store } from '@ngrx/store';
-import { selectSkills, IAppState, loadSkills } from 'src/app/core/store/index';
+import { Component, Input, ChangeDetectionStrategy } from '@angular/core';
+import { ISkill } from 'src/app/models';
 
 @Component({
   selector: 'app-skills-list',
   templateUrl: './skills-list.component.html',
   styleUrls: ['./skills-list.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class SkillsListComponent implements OnInit {
-  skills$ = this.store.pipe(select(selectSkills));
+export class SkillsListComponent {
+  @Input()
+  skills: ISkill[] = [];
 
-  constructor(private store: Store<IAppState>) {}
+  constructor() {}
 
-  ngOnInit(): void {
-    this.store.dispatch(loadSkills());
+  trackBy(skill: ISkill): string {
+    return skill.id;
   }
 }

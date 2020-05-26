@@ -1,22 +1,19 @@
-import { Component, OnInit } from '@angular/core';
-import { select, Store } from '@ngrx/store';
-import {
-  selectLanguages,
-  IAppState,
-  loadLanguages,
-} from 'src/app/core/store/index';
+import { Component, Input, ChangeDetectionStrategy } from '@angular/core';
+import { ILanguage } from 'src/app/models';
 
 @Component({
   selector: 'app-languages-list',
   templateUrl: './languages-list.component.html',
   styleUrls: ['./languages-list.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class LanguagesListComponent implements OnInit {
-  languages$ = this.store.pipe(select(selectLanguages));
+export class LanguagesListComponent {
+  @Input()
+  languages: ILanguage[] = [];
 
-  constructor(private store: Store<IAppState>) {}
+  constructor() {}
 
-  ngOnInit(): void {
-    this.store.dispatch(loadLanguages());
+  trackBy(language: ILanguage): string {
+    return language.id;
   }
 }

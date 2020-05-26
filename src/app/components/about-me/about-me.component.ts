@@ -1,22 +1,15 @@
-import { Component, OnInit } from '@angular/core';
-import { select, Store } from '@ngrx/store';
-import {
-  IAppState,
-  loadProfile,
-  selectProfile,
-} from 'src/app/core/store/index';
+import { Component, ChangeDetectionStrategy, Input } from '@angular/core';
+import { IProfile } from 'src/app/models';
 
 @Component({
   selector: 'app-about-me',
   templateUrl: './about-me.component.html',
   styleUrls: ['./about-me.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class AboutMeComponent implements OnInit {
-  profile$ = this.store.pipe(select(selectProfile));
+export class AboutMeComponent {
+  @Input()
+  profile: IProfile;
 
-  constructor(private store: Store<IAppState>) {}
-
-  ngOnInit(): void {
-    this.store.dispatch(loadProfile());
-  }
+  constructor() {}
 }

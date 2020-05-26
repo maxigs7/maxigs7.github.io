@@ -8,11 +8,11 @@ export const LOAD_PROFILE_FAILURE = '[Profile] Load Profile Failure';
 export const loadProfile = createAction(LOAD_PROFILE);
 
 export const loadProfileSuccess = createAction(
-  LOAD_PROFILE_SUCCESS,
-  props<{ data: IProfile }>()
+    LOAD_PROFILE_SUCCESS,
+    props<{ data: IProfile }>()
 );
 
 export const loadProfileFailure = createAction(
-  LOAD_PROFILE_FAILURE,
-  props<{ error: any }>()
+    LOAD_PROFILE_FAILURE,
+    props<{ error: any }>()
 );

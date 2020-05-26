@@ -1,8 +1,25 @@
 <p>resume-page works!</p>
+<ng-container *ngIf="profile$ | async as profile">
+    <app-about-me [profile]="profile"></app-about-me>
+</ng-container>
 
-<app-about-me></app-about-me>
+<ng-container *ngIf="skills$ | async as skills">
+    <app-skills-list [skills]="skills"></app-skills-list>
+</ng-container>
 
-<app-certificates-list></app-certificates-list>
-<app-experiences-list></app-experiences-list>
-<app-languages-list></app-languages-list>
-<app-skills-list></app-skills-list>
+<ng-container *ngIf="experiences$ | async as experiences">
+    <app-experiences-list [experiences]="experiences"></app-experiences-list>
+</ng-container>
+
+<ng-container *ngIf="certificates$ | async as certificates">
+    <app-certificates-list
+        [certificates]="certificates"
+    ></app-certificates-list>
+</ng-container>
+
+<ng-container *ngIf="languages$ | async as languages">
+    <app-languages-list [languages]="languages"></app-languages-list>
+</ng-container>
+
+
+
