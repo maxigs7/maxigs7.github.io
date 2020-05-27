@@ -6,6 +6,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { EffectsModule } from '@ngrx/effects';
 import { StoreModule } from '@ngrx/store';
 import { StoreRouterConnectingModule } from '@ngrx/router-store';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 
 import { environment } from 'src/environments/environment';
 import {
@@ -16,6 +17,7 @@ import {
   LanguageEffects,
   SkillEffects,
 } from './store/index';
+import { PhoneNumberInternationalPipe, PhoneURIPipe } from './pipes/index';
 
 @NgModule({
   imports: [
@@ -23,20 +25,18 @@ import {
     AngularFirestoreModule,
     ReactiveFormsModule,
     StoreModule.forRoot(appReducers),
-    EffectsModule.forRoot([
-      CertificateEffects,
-      ExperienceEffects,
-      LanguageEffects,
-      ProfileEffects,
-      SkillEffects,
-    ]),
+    EffectsModule.forRoot([CertificateEffects, ExperienceEffects, LanguageEffects, ProfileEffects, SkillEffects]),
     StoreRouterConnectingModule.forRoot({ stateKey: 'router' }),
+    StoreDevtoolsModule.instrument(),
   ],
+  declarations: [PhoneNumberInternationalPipe, PhoneURIPipe],
   exports: [
     CommonModule,
     AngularFireModule,
     AngularFirestoreModule,
     ReactiveFormsModule,
+    PhoneNumberInternationalPipe,
+    PhoneURIPipe,
   ],
 })
 export class CoreModule {}

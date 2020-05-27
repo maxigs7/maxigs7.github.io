@@ -1,0 +1,44 @@
+@import '_variables';
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: $font-size-base;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.title {
+  font-weight: 100;
+}
+
+p,
+.text-phrase {
+  font-weight: 400;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.text-strong {
+  font-weight: bold;
+}
+
+.photography {
+  border: 15px solid white;
+  border-bottom-width: 60px;
+}

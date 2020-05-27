@@ -1,17 +1,25 @@
+@import '_variables';
+
 .app-container {
-    color: #fff;
-    display: flex;
+  color: $primary-text-color;
+  display: flex;
+  height: 100%;
+
+  .image-bg {
+    background-image: url('/assets/images/bg-cover-min.jpg');
+    background-size: cover;
+    box-shadow: 5px 0 10px rgba(0, 0, 0, 0.5);
     height: 100%;
+    left: $navbar-width;
+    min-width: $image-bg-width;
+    position: fixed;
+    width: $image-bg-width;
+  }
 
-    .image-bg {
-        background: black;
-        min-width: 500px;
-        width: 500px;
-    }
-
-    .app-content-wrapper {
-        background: #3c3c3c;
-        padding: 20px 10px;
-        width: 100%;
-    }
+  .app-content-wrapper {
+    background-color: $app-background-color;
+    color: $app-text-color;
+    margin-left: $navbar-width + $image-bg-width;
+    width: 100%;
+  }
 }

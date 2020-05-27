@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { CoreModule } from '../core/core.module';
 
 import { AboutMeComponent } from './about-me/about-me.component';
 import { CertificatesListComponent } from './certificates-list/certificates-list.component';
@@ -9,17 +10,17 @@ import { LanguagesListComponent } from './languages-list/languages-list.componen
 import { NavbarComponent } from './navbar/navbar.component';
 
 const components: any[] = [
-    AboutMeComponent,
-    CertificatesListComponent,
-    ExperiencesListComponent,
-    LanguagesListComponent,
-    SkillsListComponent,
-    NavbarComponent,
+  AboutMeComponent,
+  CertificatesListComponent,
+  ExperiencesListComponent,
+  LanguagesListComponent,
+  SkillsListComponent,
+  NavbarComponent,
 ];
 
 @NgModule({
-    declarations: [...components],
-    imports: [CommonModule],
-    exports: [...components],
+  declarations: [...components],
+  imports: [CommonModule, CoreModule],
+  exports: [...components],
 })
 export class ComponentsModule {}
