@@ -1,18 +1,8 @@
 import { createAction, props } from '@ngrx/store';
 import { IProfile } from 'src/app/models/index';
 
-export const LOAD_PROFILE = '[Profile] Load Profile';
-export const LOAD_PROFILE_SUCCESS = '[Profile] Load Profile Success';
-export const LOAD_PROFILE_FAILURE = '[Profile] Load Profile Failure';
+const loadProfile = createAction('[Profile] Load Profile');
+const loadProfileSuccess = createAction('[Profile] Load Profile Success', props<{ profile: IProfile }>());
+const loadProfileFailure = createAction('[Profile] Load Profile Failure', props<{ error: any }>());
 
-export const loadProfile = createAction(LOAD_PROFILE);
-
-export const loadProfileSuccess = createAction(
-    LOAD_PROFILE_SUCCESS,
-    props<{ data: IProfile }>()
-);
-
-export const loadProfileFailure = createAction(
-    LOAD_PROFILE_FAILURE,
-    props<{ error: any }>()
-);
+export const ProfileActions = { loadProfile, loadProfileSuccess, loadProfileFailure };

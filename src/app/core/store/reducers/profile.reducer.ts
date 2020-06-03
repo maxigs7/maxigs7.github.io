@@ -1,19 +1,29 @@
 import { createReducer, on, Action } from '@ngrx/store';
 import { initialProfileState, IProfileState } from '../states/index';
-import { loadProfileSuccess } from '../actions/index';
+import { ProfileActions } from '../actions/index';
 
 export const profileFeatureKey = 'profile';
 
 const _reducer = createReducer(
   initialProfileState,
-  on(loadProfileSuccess, (state, { data }) => {
-    return { ...state, profile: data };
-  })
+  on(ProfileActions.loadProfile, (state) => ({
+    ...state,
+    error: null,
+    pending: true,
+  })),
+  on(ProfileActions.loadProfileSuccess, (state, { profile }) => ({
+    ...state,
+    profile,
+    error: null,
+    pending: false,
+  })),
+  on(ProfileActions.loadProfileFailure, (state, { error }) => ({
+    ...state,
+    error,
+    pending: false,
+  }))
 );
 
-export function profileReducer(
-  state: IProfileState | undefined,
-  action: Action
-) {
+export function profileReducer(state: IProfileState | undefined, action: Action) {
   return _reducer(state, action);
 }

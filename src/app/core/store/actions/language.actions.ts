@@ -1,18 +1,8 @@
 import { createAction, props } from '@ngrx/store';
 import { ILanguage } from 'src/app/models/index';
 
-export const LOAD_LANGUAGES = '[Language] Load Languages';
-export const LOAD_LANGUAGES_SUCCESS = '[Language] Load Languages Success';
-export const LOAD_LANGUAGES_FAILURE = '[Language] Load Languages Failure';
+const loadLanguages = createAction('[Language] Load Languages');
+const loadLanguagesSuccess = createAction('[Language] Load Languages Success', props<{ languages: ILanguage[] }>());
+const loadLanguagesFailure = createAction('[Language] Load Languages Failure', props<{ error: any }>());
 
-export const loadLanguages = createAction(LOAD_LANGUAGES);
-
-export const loadLanguagesSuccess = createAction(
-  LOAD_LANGUAGES_SUCCESS,
-  props<{ data: ILanguage[] }>()
-);
-
-export const loadLanguagesFailure = createAction(
-  LOAD_LANGUAGES_FAILURE,
-  props<{ error: any }>()
-);
+export const LanguageActions = { loadLanguages, loadLanguagesSuccess, loadLanguagesFailure };

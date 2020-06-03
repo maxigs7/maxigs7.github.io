@@ -1,5 +1,6 @@
 export * from './app.reducer';
 export * from './certificate.reducer';
+export * from './core.reducer';
 export * from './experience.reducer';
 export * from './language.reducer';
 export * from './profile.reducer';

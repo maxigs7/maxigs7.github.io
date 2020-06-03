@@ -1,4 +1,5 @@
 export * from './certificate.selectors';
+export * from './core.selectors';
 export * from './experience.selectors';
 export * from './language.selectors';
 export * from './profile.selectors';

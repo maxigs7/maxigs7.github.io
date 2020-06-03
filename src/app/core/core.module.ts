@@ -16,6 +16,7 @@ import {
   ExperienceEffects,
   LanguageEffects,
   SkillEffects,
+  CoreEffects,
 } from './store/index';
 import { PhoneNumberInternationalPipe, PhoneURIPipe } from './pipes/index';
 
@@ -25,7 +26,14 @@ import { PhoneNumberInternationalPipe, PhoneURIPipe } from './pipes/index';
     AngularFirestoreModule,
     ReactiveFormsModule,
     StoreModule.forRoot(appReducers),
-    EffectsModule.forRoot([CertificateEffects, ExperienceEffects, LanguageEffects, ProfileEffects, SkillEffects]),
+    EffectsModule.forRoot([
+      CertificateEffects,
+      CoreEffects,
+      ExperienceEffects,
+      LanguageEffects,
+      ProfileEffects,
+      SkillEffects,
+    ]),
     StoreRouterConnectingModule.forRoot({ stateKey: 'router' }),
     StoreDevtoolsModule.instrument(),
   ],
