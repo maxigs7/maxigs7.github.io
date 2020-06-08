@@ -1,36 +1,117 @@
 @import '_variables';
 
-.navbar {
+:host {
+  align-items: center;
   background-color: $primary-color;
   color: $primary-text-color;
   display: flex;
-  flex-direction: column;
-  height: 100%;
+  flex-wrap: wrap;
+  font-size: 2rem;
+  min-height: $navbar-height;
   justify-content: space-between;
   position: fixed;
-  width: $navbar-width;
+  width: 100%;
 
   a {
     color: $primary-text-color;
     text-decoration: none;
   }
 
+  .navbar-toggle {
+    background: none;
+    border: none;
+    color: $primary-text-color;
+    display: block;
+    padding: 10px;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
   .brand-name {
+    display: block;
     font-size: 2rem;
     font-weight: bold;
-    padding: 10px;
+    line-height: $navbar-height;
+    min-height: $navbar-height;
+    padding-left: 10px;
+    padding-right: 10px;
     text-align: center;
+  }
+
+  .download {
+    display: block;
+    padding: 10px;
   }
 
   .menu {
     display: flex;
+    flex-basis: 100%;
     flex-direction: column;
+    max-height: 0;
+    overflow: hidden;
+    order: 1;
+    transition: max-height 0.5s ease-out;
+
+    &.open {
+      max-height: 500px;
+    }
+
+    a {
+      display: block;
+      font-size: 1.5rem;
+      padding: 10px 20px;
+    }
   }
 
-  .menu-icon {
-    display: block;
-    font-size: 1.5rem;
-    padding: 10px 15px;
-    text-align: center;
+  @media screen and (min-width: $breakpoint-lg) {
+    justify-content: center;
+
+    .navbar-toggle {
+      display: none;
+    }
+
+    .brand-name {
+      margin: auto;
+    }
+
+    .menu {
+      align-items: center;
+      flex-direction: row;
+      justify-content: center;
+      height: $navbar-height;
+      max-height: $navbar-height;
+
+      a {
+        font-size: 1.2rem;
+      }
+    }
+  }
+
+  @media screen and (min-width: $breakpoint-xl) {
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    height: 100%;
+    width: $navbar-width;
+
+    .brand-name {
+      margin: 0;
+    }
+
+    .menu {
+      flex-direction: column;
+      max-height: none;
+      order: 0;
+
+      .menu-icon {
+        font-size: 2rem;
+      }
+      .menu-title {
+        display: none;
+      }
+    }
   }
 }

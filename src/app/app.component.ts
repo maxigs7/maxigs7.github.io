@@ -1,4 +1,8 @@
 import { Component } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
+import { IAppState, CoreSelectors, CoreActions } from './core/store';
+import { Store, select } from '@ngrx/store';
+import { take } from 'rxjs/operators';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +11,14 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'maxigs7';
+
+  constructor(private store: Store<IAppState>, private translate: TranslateService) {
+    this.store.pipe(take(1), select(CoreSelectors.selectSelectedLanguage)).subscribe((language) => {
+      translate.setDefaultLang(language);
+    });
+  }
+
+  useLanguage(language: string) {
+    this.store.dispatch(CoreActions.changeLanguage({ language }));
+  }
 }

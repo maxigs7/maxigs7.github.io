@@ -1,30 +1,48 @@
-<nav class="navbar">
-    <div class="brand-name">MGS</div>
+<button class="navbar-toggle" type="button" (click)="toggleMenu()">
+  <span class="mdi mdi-menu"></span>
+</button>
 
-    <div class="menu">
-        <a class="menu-icon" href="#">
-            <span class="mdi mdi-account"></span>
-        </a>
-        <a class="menu-icon" href="#">
-            <span class="mdi mdi-head-cog-outline"></span>
-        </a>
-        <a class="menu-icon" href="#">
-            <span class="mdi mdi-briefcase"></span>
-        </a>
-        <a class="menu-icon" href="#">
-            <span class="mdi mdi-certificate"></span>
-        </a>
-        <a class="menu-icon" href="#">
-            <span class="mdi mdi-translate"></span>
-        </a>
-        <a class="menu-icon" href="#">
-            <span class="mdi mdi-email"></span>
-        </a>
-    </div>
+<a href="/" class="brand-name">MGS</a>
 
-    <div class="download">
-        <a class="menu-icon" href="#">
-            <span class="mdi mdi-cloud-download"></span>
-        </a>
-    </div>
-</nav>
+<div class="menu" [ngClass]="{ open: menuIsOpen$ | async }">
+  <a href="#">
+    <span class="menu-icon mdi mdi-account"></span>
+    <span class="menu-title">
+      {{ 'menu.about-me' | translate }}
+    </span>
+  </a>
+  <a href="#">
+    <span class="menu-icon mdi mdi-head-cog-outline"></span>
+    <span class="menu-title">
+      {{ 'menu.skills' | translate }}
+    </span>
+  </a>
+  <a href="#">
+    <span class="menu-icon mdi mdi-briefcase"></span>
+    <span class="menu-title">
+      {{ 'menu.experiences' | translate }}
+    </span>
+  </a>
+  <a href="#">
+    <span class="menu-icon mdi mdi-certificate"></span>
+    <span class="menu-title">
+      {{ 'menu.certificates' | translate }}
+    </span>
+  </a>
+  <a href="#">
+    <span class="menu-icon mdi mdi-translate"></span>
+    <span class="menu-title">
+      {{ 'menu.languages' | translate }}
+    </span>
+  </a>
+  <a href="#">
+    <span class="menu-icon mdi mdi-email"></span>
+    <span class="menu-title">
+      {{ 'menu.contact-me' | translate }}
+    </span>
+  </a>
+</div>
+
+<a class="download menu-icon" href="#">
+  <span class="mdi mdi-cloud-download"></span>
+</a>

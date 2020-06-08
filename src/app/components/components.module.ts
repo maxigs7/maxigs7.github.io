@@ -1,7 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { CoreModule } from '../core/core.module';
+import { TranslateModule } from '@ngx-translate/core';
 
+import { CoreModule } from '../core/core.module';
 import { AboutMeComponent } from './about-me/about-me.component';
 import { CertificatesListComponent } from './certificates-list/certificates-list.component';
 import { ExperiencesListComponent } from './experiences-list/experiences-list.component';
@@ -20,7 +21,7 @@ const components: any[] = [
 
 @NgModule({
   declarations: [...components],
-  imports: [CommonModule, CoreModule],
+  imports: [CommonModule, CoreModule, TranslateModule],
   exports: [...components],
 })
 export class ComponentsModule {}

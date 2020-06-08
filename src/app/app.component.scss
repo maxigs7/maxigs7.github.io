@@ -1,25 +1,31 @@
 @import '_variables';
 
-.app-container {
-  color: $primary-text-color;
-  display: flex;
-  height: 100%;
+:host {
+  .app-container {
+    padding-top: $navbar-height;
 
-  .image-bg {
-    background-image: url('/assets/images/bg-cover-min.jpg');
-    background-size: cover;
-    box-shadow: 5px 0 10px rgba(0, 0, 0, 0.5);
-    height: 100%;
-    left: $navbar-width;
-    min-width: $image-bg-width;
-    position: fixed;
-    width: $image-bg-width;
-  }
+    .image-bg {
+      background-image: url('/assets/images/bg-cover-min.jpg');
+      background-size: cover;
+      box-shadow: 5px 0 10px rgba(0, 0, 0, 0.5);
+      height: 100%;
+      left: $navbar-width;
+      min-width: $image-bg-width;
+      position: fixed;
+      width: $image-bg-width;
+    }
 
-  .app-content-wrapper {
-    background-color: $app-background-color;
-    color: $app-text-color;
-    margin-left: $navbar-width + $image-bg-width;
-    width: 100%;
+    @media screen and (min-width: $breakpoint-lg) {
+      padding-top: $navbar-height * 2;
+    }
+
+    @media screen and (min-width: $breakpoint-xl) {
+      padding-top: 0;
+
+      .app-content-wrapper {
+        padding-left: $navbar-width + $image-bg-width;
+        width: 100%;
+      }
+    }
   }
 }

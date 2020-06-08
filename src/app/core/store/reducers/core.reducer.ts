@@ -8,6 +8,9 @@ const _reducer = createReducer(
   initialCoreState,
   on(CoreActions.changeLanguage, (state, { language }) => {
     return { ...state, selectedLanguage: language };
+  }),
+  on(CoreActions.toggleMenu, (state) => {
+    return { ...state, menuIsOpen: !state.menuIsOpen };
   })
 );
 
