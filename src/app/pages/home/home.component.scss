@@ -1,7 +1,28 @@
+@import '_variables';
+
 :host {
+  background: linear-gradient(0deg, rgba($primary-color, 0.7), rgba($primary-color, 0.7)),
+    url('/assets/images/bg-home.jpg');
+  background-size: cover;
   display: flex;
   flex-direction: column;
   height: 100%;
-  padding: 10px;
+  justify-content: center;
+  padding: $app-margin;
+  text-align: center;
   width: 100%;
+
+  h1 {
+    color: $primary-text-color;
+    margin: 0;
+  }
+
+  .welcome,
+  .title {
+    font-size: 1.6rem;
+  }
+  .full-name {
+    font-size: 1.8rem;
+    font-weight: bold;
+  }
 }

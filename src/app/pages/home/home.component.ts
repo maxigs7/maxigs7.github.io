@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Store, select } from '@ngrx/store';
+import { IAppState, ProfileSelectors, ProfileActions } from 'src/app/core/store/index';
+import { take } from 'rxjs/operators';
 
 @Component({
   selector: 'page-home',
@@ -6,7 +9,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements OnInit {
-  constructor() {}
+  profile$ = this.store.pipe(select(ProfileSelectors.selectProfile));
 
-  ngOnInit(): void {}
+  constructor(private store: Store<IAppState>) {}
+
+  ngOnInit(): void {
+    this.store.dispatch(ProfileActions.loadProfile());
+  }
 }

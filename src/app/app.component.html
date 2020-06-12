@@ -1,4 +1,4 @@
 <app-navbar></app-navbar>
-<div class="app-container">
+<div class="app-container" [ngClass]="{ 'menu-open': menuIsOpen$ | async }">
   <router-outlet></router-outlet>
 </div>

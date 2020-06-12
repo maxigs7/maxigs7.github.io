@@ -11,6 +11,7 @@ import { take } from 'rxjs/operators';
 })
 export class AppComponent {
   title = 'maxigs7';
+  menuIsOpen$ = this.store.pipe(select(CoreSelectors.selectMenuIsOpen));
 
   constructor(private store: Store<IAppState>, private translate: TranslateService) {
     this.store.pipe(take(1), select(CoreSelectors.selectSelectedLanguage)).subscribe((language) => {

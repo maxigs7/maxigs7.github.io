@@ -4,5 +4,8 @@
         "about": "Acerca de mi",
         "resume": "CV",
         "contact": "Contactame"
+    },
+    "home": {
+        "welcome": "Hola, soy"
     }
 }

@@ -8,8 +8,10 @@ $menu-item-height: 100px;
   color: $primary-text-color;
   display: flex;
   flex-wrap: wrap;
+  left: 0;
   min-height: $navbar-height;
   position: fixed;
+  top: 0;
   transition: margin-left 0.5s;
   width: 100%;
 
@@ -101,13 +103,14 @@ $menu-item-height: 100px;
   }
 
   @media screen and (min-width: $breakpoint-md) {
-    margin-left: 0;
+    margin-left: 0 !important;
     align-items: center;
     flex-direction: column;
     height: 100%;
     width: $navbar-width;
 
-    > .brand-name {
+    > .brand-name,
+    > .navbar-toggle {
       display: none;
     }
 
