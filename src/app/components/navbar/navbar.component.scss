@@ -61,6 +61,7 @@ $menu-item-height: 100px;
     }
 
     .brand-name {
+      display: none;
       background-color: $accent-color;
       color: $accent-text-color;
       margin: 0;
@@ -116,6 +117,10 @@ $menu-item-height: 100px;
 
     .menu {
       width: $navbar-width;
+
+      .brand-name {
+        display: block;
+      }
     }
   }
 }
