@@ -1,10 +1,8 @@
 {
     "menu": {
-        "about-me": "Acerca de mi",
-        "skills": "Habilidades",
-        "experiences": "Experiencias",
-        "certificates": "Certificados",
-        "languages": "Idiomas",
-        "contact-me": "Contactame"
+        "home": "Inicio",
+        "about": "Acerca de mi",
+        "resume": "CV",
+        "contact": "Contactame"
     }
 }

@@ -1,31 +1,18 @@
 @import '_variables';
 
 :host {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+
   .app-container {
+    margin: $app-margin;
     padding-top: $navbar-height;
 
-    .image-bg {
-      background-image: url('/assets/images/bg-cover-min.jpg');
-      background-size: cover;
-      box-shadow: 5px 0 10px rgba(0, 0, 0, 0.5);
-      height: 100%;
-      left: $navbar-width;
-      min-width: $image-bg-width;
-      position: fixed;
-      width: $image-bg-width;
-    }
-
-    @media screen and (min-width: $breakpoint-lg) {
-      padding-top: $navbar-height * 2;
-    }
-
-    @media screen and (min-width: $breakpoint-xl) {
+    @media screen and (min-width: $breakpoint-md) {
+      padding-left: $navbar-width;
       padding-top: 0;
-
-      .app-content-wrapper {
-        padding-left: $navbar-width + $image-bg-width;
-        width: 100%;
-      }
     }
   }
 }

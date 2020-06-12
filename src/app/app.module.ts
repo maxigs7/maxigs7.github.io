@@ -27,7 +27,6 @@ import { ComponentsModule } from './components/components.module';
     }),
     CoreModule,
     ComponentsModule,
-    ResumeModule,
     AppRoutingModule,
   ],
   providers: [],

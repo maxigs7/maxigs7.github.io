@@ -1,7 +1,7 @@
 //*****************************************************************/
 // FONTS
 //****************************************************************/
-$font-size-base: 15px;
+$font-size-base: 14px;
 
 //*****************************************************************/
 // COLORS
@@ -10,8 +10,11 @@ $font-size-base: 15px;
 $primary-color: #264653;
 $secondary-color: #2a9d8f;
 $accent-color: #e76f51;
+
 $primary-text-color: #fff;
-$secondary-text-color: #333;
+$secondary-text-color: #fff;
+$accent-text-color: #fff;
+
 $app-background-color: #fff;
 $app-text-color: #333;
 
@@ -26,7 +29,12 @@ $breakpoint-xl: 1200px;
 //*****************************************************************/
 // NAVBAR
 //****************************************************************/
-$navbar-height: 65px;
-$navbar-width: 100px;
+$navbar-height: 50px;
+$navbar-width: 120px;
 
 $image-bg-width: 500px;
+
+//*****************************************************************/
+// SPACES
+//****************************************************************/
+$app-margin: 10px;

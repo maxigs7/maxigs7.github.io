@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostBinding } from '@angular/core';
 import { Store, select } from '@ngrx/store';
+import { tap } from 'rxjs/operators';
 import { IAppState, CoreActions, CoreSelectors } from 'src/app/core/store';
 
 @Component({
@@ -8,7 +9,19 @@ import { IAppState, CoreActions, CoreSelectors } from 'src/app/core/store';
   styleUrls: ['./navbar.component.scss'],
 })
 export class NavbarComponent implements OnInit {
-  menuIsOpen$ = this.store.pipe(select(CoreSelectors.selectMenuIsOpen));
+  private isOpen: boolean = false;
+
+  @HostBinding('class.open')
+  get openClass() {
+    return this.isOpen;
+  }
+
+  menuIsOpen$ = this.store.pipe(
+    select(CoreSelectors.selectMenuIsOpen),
+    tap((isOpen) => {
+      this.isOpen = isOpen;
+    })
+  );
 
   constructor(private store: Store<IAppState>) {}
 

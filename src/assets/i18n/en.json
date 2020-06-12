@@ -1,10 +1,8 @@
 {
     "menu": {
-        "about-me": "About me",
-        "skills": "Skills",
-        "experiences": "Experiences",
-        "certificates": "Certificates",
-        "languages": "Languages",
-        "contact-me": "Contact me"
+        "home": "Home",
+        "about": "About me",
+        "resume": "Resume",
+        "contact": "Contact me"
     }
 }

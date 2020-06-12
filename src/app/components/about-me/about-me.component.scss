@@ -1,28 +1,49 @@
 @import '_variables';
+
 :host {
-  .section-image {
-    transform: rotate(-13deg) translateX(-100px);
-  }
+  .card-content {
+    text-align: center;
 
-  .info-items {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
 
-    li {
-      display: flex;
-      margin-bottom: 10px;
+      li {
+        margin-bottom: 10px;
 
-      .mdi {
-        color: $secondary-color;
-        font-size: 1.3rem;
-        margin-right: 10px;
+        a {
+          color: $secondary-text-color;
+          text-decoration: none;
+        }
+        .mdi {
+          margin-right: 10px;
+        }
       }
     }
+  }
 
-    a {
-      color: $secondary-text-color;
-      text-decoration: none;
+  .card-footer {
+    &-button {
+      box-shadow: inset -5px 5px 10px rgba(0, 0, 0, 0.5);
+      color: $primary-text-color;
+      text-transform: uppercase;
+
+      &.linkedin {
+        background-color: #0e76a8;
+      }
+      &.skype {
+        background-color: #00aff0;
+      }
+      &.github {
+        background-color: #24292e;
+      }
+    }
+  }
+
+  @media screen and (min-width: $breakpoint-sm) {
+    .card-content {
+      text-align: left;
     }
   }
 }

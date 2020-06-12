@@ -9,6 +9,7 @@ import { ExperiencesListComponent } from './experiences-list/experiences-list.co
 import { SkillsListComponent } from './skills-list/skills-list.component';
 import { LanguagesListComponent } from './languages-list/languages-list.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { RouterModule } from '@angular/router';
 
 const components: any[] = [
   AboutMeComponent,
@@ -21,7 +22,7 @@ const components: any[] = [
 
 @NgModule({
   declarations: [...components],
-  imports: [CommonModule, CoreModule, TranslateModule],
+  imports: [CommonModule, CoreModule, TranslateModule, RouterModule],
   exports: [...components],
 })
 export class ComponentsModule {}

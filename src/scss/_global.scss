@@ -9,6 +9,7 @@
 body {
   font-family: 'Roboto', sans-serif;
   font-size: $font-size-base;
+  line-height: 1.42857143;
 }
 
 h1,
@@ -41,14 +42,4 @@ p,
 .photography {
   border: 15px solid white;
   border-bottom-width: 60px;
-}
-
-.hidden-lg-down {
-  display: none;
-}
-
-@media screen and (min-width: $breakpoint-xl) {
-  .hidden-lg-down {
-    display: block;
-  }
 }

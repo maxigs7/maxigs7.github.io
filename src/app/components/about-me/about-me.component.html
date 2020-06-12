@@ -1,10 +1,48 @@
+<h1 class="text-uppercase">{{ 'menu.about-me' | translate }}</h1>
+
+<div class="card with-image with-footer">
+  <div class="card-image">
+    <img src="assets/images/profile.jpg" class="circle" />
+  </div>
+  <div class="card-content">
+    <h3 class="text-uppercase">{{ profile.title }}</h3>
+    <h2 class="text-strong">{{ profile.firstName }} {{ profile.lastName }}</h2>
+    <ul>
+      <li><span class="mdi mdi-map-marker"></span> {{ profile.location }}</li>
+      <li>
+        <span class="mdi mdi-message"></span>
+        <a href="#">{{ profile.email }}</a>
+      </li>
+      <li>
+        <span class="mdi mdi-phone"></span>
+        <a href="{{ profile.phoneNumber | phoneURI: 'AR' }}">{{
+          profile.phoneNumber | phoneNumberInternational: 'AR'
+        }}</a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="card-footer with-buttons">
+    <a href="#" target="_blank" class="card-footer-button linkedin">
+      <span class="card-footer-button-icon mdi mdi-linkedin"></span>
+      <span class="card-footer-button-text">Linkedin</span>
+    </a>
+    <a href="#" target="_blank" class="card-footer-button skype">
+      <span class="card-footer-button-icon mdi mdi-skype"></span>
+      <span class="card-footer-button-text">Skype</span>
+    </a>
+    <a href="#" target="_blank" class="card-footer-button github">
+      <span class="card-footer-button-icon mdi mdi-github"></span>
+      <span class="card-footer-button-text">Github</span>
+    </a>
+  </div>
+</div>
+<!--
 <section class="section">
   <div class="section-title">
     <h1 class="text-uppercase">About Me</h1>
     <div class="section-title-icons">
-      <a href="#" target="_blank">
-        <span class="mdi mdi-linkedin"></span>
-      </a>
+      <a href="#" target="_blank"> </a>
       <a href="#">
         <span class="mdi mdi-skype"></span>
       </a>
@@ -18,9 +56,6 @@
     <img src="assets/images/profile.jpg" class="section-image photography" />
 
     <div class="section-content">
-      <h3 class="text-uppercase">{{ profile.title }}</h3>
-      <h2 class="text-strong">{{ profile.firstName }} {{ profile.lastName }}</h2>
-
       <p>{{ profile.summary }}</p>
 
       <ul class="info-items">
@@ -43,4 +78,4 @@
       </div>
     </div>
   </div>
-</section>
+</section> -->

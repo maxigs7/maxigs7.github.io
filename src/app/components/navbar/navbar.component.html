@@ -1,48 +1,36 @@
-<button class="navbar-toggle" type="button" (click)="toggleMenu()">
+<a class="navbar-toggle hidden-md-up" (click)="toggleMenu()">
   <span class="mdi mdi-menu"></span>
-</button>
+</a>
 
-<a href="/" class="brand-name">MGS</a>
+<a routerLink="/home" class="brand-name text-uppercase">Maxi Gonzalez Schweizer</a>
 
 <div class="menu" [ngClass]="{ open: menuIsOpen$ | async }">
-  <a href="#">
-    <span class="menu-icon mdi mdi-account"></span>
+  <img src="assets/images/profile.jpg" class="profile-img" />
+
+  <a routerLink="/home" class="brand-name text-uppercase text-center">MGS</a>
+
+  <a routerLink="/home" routerLinkActive="active" class="menu-link">
+    <span class="menu-icon mdi mdi-home"></span>
     <span class="menu-title">
-      {{ 'menu.about-me' | translate }}
+      {{ 'menu.home' | translate }}
     </span>
   </a>
-  <a href="#">
-    <span class="menu-icon mdi mdi-head-cog-outline"></span>
+  <a routerLink="/about" routerLinkActive="active" class="menu-link">
+    <span class="menu-icon mdi mdi-account-circle-outline"></span>
     <span class="menu-title">
-      {{ 'menu.skills' | translate }}
+      {{ 'menu.about' | translate }}
     </span>
   </a>
-  <a href="#">
-    <span class="menu-icon mdi mdi-briefcase"></span>
+  <a routerLink="/resume" routerLinkActive="active" class="menu-link">
+    <span class="menu-icon mdi mdi-card-account-details-outline"></span>
     <span class="menu-title">
-      {{ 'menu.experiences' | translate }}
+      {{ 'menu.resume' | translate }}
     </span>
   </a>
-  <a href="#">
-    <span class="menu-icon mdi mdi-certificate"></span>
+  <a routerLink="/contact" routerLinkActive="active" class="menu-link">
+    <span class="menu-icon mdi mdi-phone-outline"></span>
     <span class="menu-title">
-      {{ 'menu.certificates' | translate }}
-    </span>
-  </a>
-  <a href="#">
-    <span class="menu-icon mdi mdi-translate"></span>
-    <span class="menu-title">
-      {{ 'menu.languages' | translate }}
-    </span>
-  </a>
-  <a href="#">
-    <span class="menu-icon mdi mdi-email"></span>
-    <span class="menu-title">
-      {{ 'menu.contact-me' | translate }}
+      {{ 'menu.contact' | translate }}
     </span>
   </a>
 </div>
-
-<a class="download menu-icon" href="#">
-  <span class="mdi mdi-cloud-download"></span>
-</a>
