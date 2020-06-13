@@ -2,12 +2,17 @@
   <span class="mdi mdi-menu"></span>
 </a>
 
-<a routerLink="/home" class="brand-name text-uppercase">Maxi Gonzalez Schweizer</a>
+<a routerLink="/home" class="brand-name text-uppercase title">Maxi Gonzalez Schweizer</a>
 
 <div class="menu" [ngClass]="{ open: menuIsOpen$ | async }">
   <img src="assets/images/profile.jpg" class="profile-img" />
 
-  <a routerLink="/home" class="brand-name text-uppercase text-center">MGS</a>
+  <a routerLink="/home" class="brand-name text-uppercase text-center title">MGS</a>
+
+  <div class="language-selector">
+    <img class="language-selector-item" src="assets/images/en.png" (click)="changeLanguage('en')" />
+    <img class="language-selector-item" src="assets/images/es.png" (click)="changeLanguage('es')" />
+  </div>
 
   <a routerLink="/home" routerLinkActive="active" class="menu-link">
     <span class="menu-icon mdi mdi-home"></span>

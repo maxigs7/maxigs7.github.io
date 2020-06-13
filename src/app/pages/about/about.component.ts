@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Store, select } from '@ngrx/store';
+
+import { ProfileSelectors, IAppState, ProfileActions, CoreSelectors } from 'src/app/core/store/index';
 
 @Component({
   selector: 'page-about',
@@ -6,7 +9,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./about.component.scss'],
 })
 export class AboutComponent implements OnInit {
-  constructor() {}
+  lang$ = this.store.pipe(select(CoreSelectors.selectSelectedLanguage));
+  profile$ = this.store.pipe(select(ProfileSelectors.selectProfile));
+  constructor(private store: Store<IAppState>) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.store.dispatch(ProfileActions.loadProfile());
+  }
 }

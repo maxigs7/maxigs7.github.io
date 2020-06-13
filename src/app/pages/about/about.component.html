@@ -1,1 +1,12 @@
-<h1>ABOUT</h1>
+<section class="section" *ngIf="lang$ | async as lang">
+  <div class="section-title">
+    <i class="mdi mdi-account-circle-outline"></i>
+    <h1 class="text-lowercase">{{ 'menu.about' | translate }}</h1>
+  </div>
+
+  <div class="section-content" *ngIf="profile$ | async as profile">
+    <p class="about-summary text-justify">
+      {{ profile.summary[lang] }}
+    </p>
+  </div>
+</section>

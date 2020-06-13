@@ -11,6 +11,9 @@ const _reducer = createReducer(
   }),
   on(CoreActions.toggleMenu, (state) => {
     return { ...state, menuIsOpen: !state.menuIsOpen };
+  }),
+  on(CoreActions.closeMenu, (state) => {
+    return { ...state, menuIsOpen: false };
   })
 );
 

@@ -1,3 +1,5 @@
+import { IMultilingual } from './multilingual.interface';
+
 export interface IProfile {
   id: string;
   email: string;
@@ -7,6 +9,6 @@ export interface IProfile {
   location: string;
   phoneNumber: string;
   skype: string;
-  summary: string;
+  summary: IMultilingual;
   title: string;
 }

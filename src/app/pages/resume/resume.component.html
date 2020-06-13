@@ -1,1 +1,10 @@
-<h1>RESUME</h1>
+<section class="section" *ngIf="lang$ | async as lang">
+  <div class="section-title">
+    <i class="mdi mdi-card-account-details-outline"></i>
+    <h1 class="text-lowercase">{{ 'menu.resume' | translate }}</h1>
+  </div>
+
+  <div class="section-content">
+    HERE GOES EXPERIENCE, CERTIFICATES, LANGUAGES AND SKILLS
+  </div>
+</section>

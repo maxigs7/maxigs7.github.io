@@ -30,4 +30,8 @@ export class NavbarComponent implements OnInit {
   toggleMenu(): void {
     this.store.dispatch(CoreActions.toggleMenu());
   }
+
+  changeLanguage(language: string) {
+    this.store.dispatch(CoreActions.changeLanguage({ language }));
+  }
 }
