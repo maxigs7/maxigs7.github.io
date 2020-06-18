@@ -12,17 +12,24 @@
   text-align: center;
   width: 100%;
 
-  h1 {
+  h1,
+  h3 {
     color: $primary-text-color;
+    letter-spacing: -1px;
     margin: 0;
   }
 
-  .welcome,
-  .title {
-    font-size: 1.6rem;
+  h1 {
+    margin: 0;
   }
+
   .full-name {
-    font-size: 1.8rem;
     font-weight: bold;
+  }
+
+  @media screen and (min-width: $breakpoint-md) {
+    h1 {
+      letter-spacing: -4px;
+    }
   }
 }

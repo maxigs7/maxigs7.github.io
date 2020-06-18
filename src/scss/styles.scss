@@ -1,8 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
 @import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&display=swap);
-@import '~normalize.css';
+@import 'vendor/bootstrap-reboot.css';
 @import '~@mdi/font/css/materialdesignicons.css';
 @import '_variables';
+@import '_typography';
 @import '_global';
 
 /********************************************************************
@@ -11,6 +12,7 @@
 .section {
   display: flex;
   flex-direction: column;
+  max-width: 700px;
 
   &-title {
     align-items: center;
@@ -20,11 +22,6 @@
 
     .mdi {
       font-size: 4rem;
-    }
-
-    h1 {
-      margin: 0;
-      font-size: 2rem;
     }
   }
 

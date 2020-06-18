@@ -1,9 +1,4 @@
 //*****************************************************************/
-// FONTS
-//****************************************************************/
-$font-size-base: 14px;
-
-//*****************************************************************/
 // COLORS
 //****************************************************************/
 
@@ -17,6 +12,29 @@ $accent-text-color: #fff;
 
 $app-background-color: #fff;
 $app-text-color: #333;
+
+//*****************************************************************/
+// CORE
+//****************************************************************/
+$spacer: 1rem !default;
+
+//*****************************************************************/
+// Typography
+// Font, line-height, and color for body text, headings, and more.
+//****************************************************************/
+$font-family-base: 'Montserrat', sans-serif !default;
+$font-size-base: 1rem !default; // Assumes the browser default, typically `16px`
+$font-size-sm: $font-size-base * 0.875 !default;
+$font-size-lg: $font-size-base * 1.25 !default;
+
+$font-weight-light: 300 !default;
+$font-weight-normal: 600 !default;
+
+$font-weight-base: $font-weight-normal !default;
+
+$line-height-base: 1.5 !default;
+$line-height-sm: 1.25 !default;
+$line-height-lg: 2 !default;
 
 //*****************************************************************/
 // SCREENS

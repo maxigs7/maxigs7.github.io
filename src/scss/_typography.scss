@@ -1,0 +1,39 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.title,
+.text-strong {
+  font-weight: $font-weight-normal;
+}
+
+h1 {
+  letter-spacing: -2px;
+
+  @media screen and (min-width: $breakpoint-md) {
+    font-size: $font-size-base * 2.5;
+    letter-spacing: -4px;
+  }
+}
+
+.text-light {
+  font-weight: $font-weight-light;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.text-lowercase {
+  text-transform: lowercase;
+}
+
+.text-justify {
+  text-align: justify;
+}
