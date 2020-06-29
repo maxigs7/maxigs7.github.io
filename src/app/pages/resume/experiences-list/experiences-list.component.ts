@@ -16,4 +16,9 @@ export class ExperiencesListComponent {
   trackBy(experience: IExperience): string {
     return experience.id;
   }
+
+  sortBy(): IExperience[] {
+    // DESC
+    return [...this.experiences].sort((a, b) => b.startDate.getTime() - a.startDate.getTime());
+  }
 }

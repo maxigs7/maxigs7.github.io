@@ -4,9 +4,14 @@ import { TranslateModule } from '@ngx-translate/core';
 
 import { ResumeRoutingModule } from './resume-routing.module';
 import { ResumeComponent } from './resume.component';
+import { CertificatesListComponent } from './certificates-list/certificates-list.component';
+import { ExperiencesListComponent } from './experiences-list/experiences-list.component';
+import { SkillsListComponent } from './skills-list/skills-list.component';
+
+const components: any[] = [CertificatesListComponent, ExperiencesListComponent, SkillsListComponent, ResumeComponent];
 
 @NgModule({
-  declarations: [ResumeComponent],
+  declarations: [...components],
   imports: [CommonModule, ResumeRoutingModule, TranslateModule],
 })
 export class ResumeModule {}
