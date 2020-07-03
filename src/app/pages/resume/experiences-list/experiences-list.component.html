@@ -1,10 +1,19 @@
-<h2 class="title text-uppercase"><i class="mdi mdi-briefcase-outline"></i> Work History</h2>
-<div *ngFor="let experience of sortBy(); trackBy: trackBy" class="experience-item">
-  <h3>{{ experience.startDate | date: 'MMM yyyy' }} – {{ (experience.endDate | date: 'MMM yyyy') || 'Current' }}</h3>
-  <h4>
-    {{ experience.title }}
-  </h4>
-  <h5>
-    {{ experience.company }}
+<h2 class="title text-uppercase event event-title">
+  <i class="mdi mdi-briefcase-outline"></i>
+  Work History
+</h2>
+<div
+  *ngFor="let experience of sortBy(); trackBy: trackBy"
+  class="event event-item"
+  [ngClass]="{ current: !experience.endDate }"
+>
+  <h5 class="event-item-book text-uppercase text-light">
+    {{ experience.startDate | date: 'MMM yyyy' }} – {{ (experience.endDate | date: 'MMM yyyy') || 'Current' }}
   </h5>
+  <h3 class="event-item-title text-uppercase text-strong">
+    {{ experience.title }}
+  </h3>
+  <h2 class="event-item-company text-uppercase text-light">
+    {{ experience.company }}
+  </h2>
 </div>

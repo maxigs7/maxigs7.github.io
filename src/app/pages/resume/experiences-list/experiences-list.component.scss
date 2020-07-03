@@ -3,24 +3,4 @@
 :host {
   display: flex;
   flex-direction: column;
-
-  .title {
-    align-items: center;
-    display: flex;
-    font-size: 1.4rem;
-    margin-bottom: 20px;
-
-    .mdi {
-      align-items: center;
-      background-color: $accent-color;
-      border-radius: 50%;
-      color: $accent-text-color;
-      display: flex;
-      font-size: 2rem;
-      height: 60px;
-      justify-content: center;
-      margin-right: 10px;
-      width: 60px;
-    }
-  }
 }

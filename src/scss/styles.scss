@@ -30,3 +30,101 @@
     margin-top: 20px;
   }
 }
+
+.event {
+  $event-icon-size: 60px;
+  $event-bullet-size: 14px;
+  $event-bar-width: 4px;
+
+  &-title {
+    align-items: center;
+    display: flex;
+    font-size: 1.4rem;
+    margin-bottom: 0px;
+
+    .mdi {
+      align-items: center;
+      background-color: $accent-color;
+      border-radius: 50%;
+      color: $accent-text-color;
+      display: flex;
+      font-size: 2rem;
+      height: $event-icon-size;
+      justify-content: center;
+      margin-right: 10px;
+      width: $event-icon-size;
+    }
+  }
+
+  &-item {
+    margin-left: $event-icon-size / 2;
+    padding: 20px 0 20px $event-icon-size / 2;
+    position: relative;
+
+    &:before {
+      background-color: $primary-color;
+      bottom: 0;
+      content: '';
+      display: block;
+      left: -$event-bar-width/2;
+      position: absolute;
+      top: 0;
+      width: $event-bar-width;
+    }
+
+    &:after {
+      background-color: $primary-color;
+      border-radius: 50%;
+      content: '';
+      display: block;
+      height: $event-bullet-size;
+      left: -$event-bullet-size/2;
+      position: absolute;
+      top: 30px;
+      width: $event-bullet-size;
+    }
+
+    &.current:after {
+      background-color: $accent-color;
+    }
+
+    &-book {
+      background: $accent-color;
+      color: $accent-text-color;
+      display: inline-block;
+      font-size: 0.7rem;
+      letter-spacing: 0;
+      line-height: 1.3;
+      margin: 0 0 1.5rem 0;
+      position: relative;
+      padding: 3px 8px;
+
+      &:before {
+        border: 10px solid $accent-color;
+        border-left-color: transparent !important;
+        bottom: 0;
+        content: '';
+        display: block;
+        left: -1.2rem;
+        position: absolute;
+        z-index: -1;
+      }
+    }
+
+    &-title {
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      margin: 0 0 0.2em 0;
+      padding: 0;
+    }
+
+    &-company {
+      margin: 0;
+      padding: 0 0 0.3em 0;
+      font-size: 0.8rem;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: $app-text-color;
+    }
+  }
+}

@@ -1,10 +1,15 @@
-<h2 class="title text-uppercase"><i class="mdi mdi-certificate-outline"></i> Certificates</h2>
-<div *ngFor="let certificate of sortBy(); trackBy: trackBy" class="certificate-item">
-  <h3>{{ certificate.date | date: 'MMM yyyy' }}</h3>
-  <h4>
-    {{ certificate.title[lang] }}
-  </h4>
-  <h5>
-    {{ certificate.company }}
+<h2 class="title text-uppercase event event-title">
+  <i class="mdi mdi-certificate-outline"></i>
+  Certificates
+</h2>
+<div *ngFor="let certificate of sortBy(); trackBy: trackBy" class="event event-item">
+  <h5 class="event-item-book text-uppercase text-light">
+    {{ certificate.date | date: 'MMM yyyy' }}
   </h5>
+  <h3 class="event-item-title text-uppercase text-strong">
+    {{ certificate.title[lang] }}
+  </h3>
+  <h2 class="event-item-company text-uppercase text-light">
+    {{ certificate.company }}
+  </h2>
 </div>

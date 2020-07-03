@@ -14,6 +14,7 @@ $menu-item-height: 100px;
   top: 0;
   transition: margin-left 0.5s;
   width: 100%;
+  z-index: 100;
 
   a {
     color: $primary-text-color;
