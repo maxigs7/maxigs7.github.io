@@ -1,8 +1,9 @@
 import { Injectable } from '@angular/core';
 import { Actions, createEffect, ofType } from '@ngrx/effects';
-import { tap, map } from 'rxjs/operators';
+import { tap, map, switchMap } from 'rxjs/operators';
 import { CoreActions } from '../actions/index';
 import { TranslateService } from '@ngx-translate/core';
+import { of } from 'rxjs';
 
 @Injectable()
 export class CoreEffects {
@@ -12,7 +13,7 @@ export class CoreEffects {
       tap((action) => {
         this.translateService.use(action.language);
       }),
-      map(() => CoreActions.changeLanguageSuccess())
+      switchMap(() => [CoreActions.closeMenu(), CoreActions.changeLanguageSuccess()])
     )
   );
 
