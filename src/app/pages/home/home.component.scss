@@ -3,6 +3,7 @@
 :host {
   background: linear-gradient(0deg, rgba($primary-color, 0.75), rgba($primary-color, 0.75)),
     url('/assets/images/bg-home.jpg');
+  background-position: center right;
   background-size: cover;
   display: flex;
   flex-direction: column;
