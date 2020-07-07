@@ -9,6 +9,9 @@ import { IExperience } from 'src/app/models';
 })
 export class ExperiencesListComponent {
   @Input()
+  lang: string;
+
+  @Input()
   experiences: IExperience[] = [];
 
   constructor() {}

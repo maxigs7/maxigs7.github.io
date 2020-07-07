@@ -7,7 +7,7 @@
   <div class="section-content">
     <div class="experiences-and-certificates">
       <ng-container *ngIf="experiences$ | async as experiences">
-        <app-experiences-list [experiences]="experiences"></app-experiences-list>
+        <app-experiences-list [experiences]="experiences" [lang]="lang"></app-experiences-list>
       </ng-container>
       <ng-container *ngIf="certificates$ | async as certificates">
         <app-certificates-list [certificates]="certificates" [lang]="lang"></app-certificates-list>

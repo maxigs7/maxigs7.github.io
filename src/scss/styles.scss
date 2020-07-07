@@ -126,5 +126,10 @@
       text-transform: uppercase;
       color: $app-text-color;
     }
+
+    &-description {
+      font-size: 0.9rem;
+      margin: 0.6em 0 0.2em 0;
+    }
   }
 }
