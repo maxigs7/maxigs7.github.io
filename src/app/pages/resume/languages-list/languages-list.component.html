@@ -1,3 +1,9 @@
-<div *ngFor="let language of languages; trackBy: trackBy">
-  {{ language.name }}
+<div *ngFor="let language of sortBy(); trackBy: trackBy" class="languages-item">
+  <img class="languages-item-flag" [src]="'assets/images/' + language.id + '-rounded.svg'" [alt]="language.name" />
+
+  <h4 class="languages-item-name text-light">{{ language.name }}</h4>
+
+  <div class="languages-item-bars">
+    <span *ngFor="let bar of bars" class="languages-item-bar" [ngClass]="{ filled: bar <= language.level }"></span>
+  </div>
 </div>

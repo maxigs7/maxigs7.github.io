@@ -14,8 +14,13 @@ export abstract class FirestoreService<T> {
   doc$(id: string): Observable<T> {
     return this.firestore
       .doc<T>(`${this.basePath}/${id}`)
-      .valueChanges()
+      .snapshotChanges()
       .pipe(
+        map((action) => {
+          const data: T = action.payload.data() as T;
+          const id = action.payload.id;
+          return { id, ...data };
+        }),
         map(
           (r): T => {
             return this.mapTimestamp(r);
@@ -34,8 +39,15 @@ export abstract class FirestoreService<T> {
   collection$(queryFn?: QueryFn): Observable<T[]> {
     return this.firestore
       .collection(`${this.basePath}`, queryFn)
-      .valueChanges()
+      .snapshotChanges()
       .pipe(
+        map((actions) => {
+          return actions.map((a) => {
+            const data: T = a.payload.doc.data() as T;
+            const id = a.payload.doc.id;
+            return { id, ...data };
+          });
+        }),
         map((r): T[] => {
           return r.map((i) => this.mapTimestamp(i));
         }),
