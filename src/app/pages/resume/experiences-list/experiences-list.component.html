@@ -19,4 +19,10 @@
   <p class="event-item-description">
     {{ experience.summary[lang] }}
   </p>
+  <p class="event-item-description">{{ 'experience.responsabilities' | translate }}:</p>
+  <ul class="event-item-responsabilities">
+    <li *ngFor="let responsability of experience.responsabilities" class="event-item-responsabilities-item">
+      {{ responsability[lang] }}
+    </li>
+  </ul>
 </div>

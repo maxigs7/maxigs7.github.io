@@ -32,7 +32,6 @@
     &-title {
       background-color: $accent-color;
       color: $accent-text-color;
-      display: inline-block;
       font-size: 1.4rem;
       padding: 10px 20px;
     }
@@ -138,6 +137,10 @@
     &-description {
       font-size: 0.9rem;
       margin: 0.6em 0 0.2em 0;
+    }
+
+    &-responsabilities {
+      font-size: 0.9rem;
     }
   }
 }

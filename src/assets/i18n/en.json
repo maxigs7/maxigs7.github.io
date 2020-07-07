@@ -13,5 +13,8 @@
         "languages": "Languages",
         "skills": "Skills",
         "work_history": "Work History"
+    },
+    "experience": {
+        "responsabilities": "Responsabilities"
     }
 }

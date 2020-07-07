@@ -1,3 +1,5 @@
+@import '_variables';
+
 :host {
   align-items: center;
   display: flex;
@@ -12,19 +14,53 @@
 
     &-content {
       display: flex;
+      flex-direction: column;
       justify-content: center;
+    }
+  }
 
-      > div {
-        padding-left: 30px;
-        padding-right: 30px;
+  .resume {
+    &-top,
+    &-middle {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 20px;
+      width: 100%;
+    }
+
+    &-box {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  @media screen and (min-width: $breakpoint-md) {
+    .resume {
+      &-top {
+        flex-direction: row;
+        justify-content: space-around;
       }
 
-      .col-1 {
-        width: 58%;
+      &-box {
+        align-items: center;
+        width: 50%;
+
+        &:first-child {
+          margin-right: 10px;
+        }
       }
 
-      .col-2 {
-        width: 42%;
+      .section-content-title {
+        min-width: 250px;
+        text-align: center;
+      }
+    }
+  }
+
+  @media screen and (min-width: $breakpoint-xl) {
+    .resume {
+      &-middle {
+        flex-direction: row;
       }
     }
   }

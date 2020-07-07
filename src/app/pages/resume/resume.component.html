@@ -1,26 +1,40 @@
-<section class="section" *ngIf="lang$ | async as lang">
+<section class="section resume" *ngIf="lang$ | async as lang">
   <div class="section-title">
     <i class="mdi mdi-card-account-details-outline"></i>
     <h1 class="text-lowercase">{{ 'menu.resume' | translate }}</h1>
   </div>
 
   <div class="section-content">
-    <div class="col-1">
-      <ng-container *ngIf="experiences$ | async as experiences">
-        <app-experiences-list [experiences]="experiences" [lang]="lang"></app-experiences-list>
-      </ng-container>
-      <ng-container *ngIf="certificates$ | async as certificates">
-        <app-certificates-list [certificates]="certificates" [lang]="lang"></app-certificates-list>
-      </ng-container>
+    <div class="resume-top">
+      <div class="resume-box">
+        <h2 class="text-uppercase section-content-title">
+          {{ 'resume.skills' | translate }}
+        </h2>
+        <ng-container *ngIf="skills$ | async as skills">
+          <app-skills-list [skills]="skills"></app-skills-list>
+        </ng-container>
+      </div>
+      <div class="resume-box">
+        <h2 class="text-uppercase section-content-title">
+          {{ 'resume.languages' | translate }}
+        </h2>
+        <ng-container *ngIf="languages$ | async as languages">
+          <app-languages-list [languages]="languages"></app-languages-list>
+        </ng-container>
+      </div>
     </div>
 
-    <div class="col-2">
-      <ng-container *ngIf="skills$ | async as skills">
-        <app-skills-list [skills]="skills"></app-skills-list>
-      </ng-container>
-      <ng-container *ngIf="languages$ | async as languages">
-        <app-languages-list [languages]="languages"></app-languages-list>
-      </ng-container>
+    <div class="resume-middle">
+      <div class="resume-box">
+        <ng-container *ngIf="experiences$ | async as experiences">
+          <app-experiences-list [experiences]="experiences" [lang]="lang"></app-experiences-list>
+        </ng-container>
+      </div>
+      <div class="resume-box">
+        <ng-container *ngIf="certificates$ | async as certificates">
+          <app-certificates-list [certificates]="certificates" [lang]="lang"></app-certificates-list>
+        </ng-container>
+      </div>
     </div>
   </div>
 </section>
