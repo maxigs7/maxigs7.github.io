@@ -4,11 +4,10 @@ import { TranslateModule } from '@ngx-translate/core';
 
 import { CoreModule } from '../core/core.module';
 import { AboutMeComponent } from './about-me/about-me.component';
-import { LanguagesListComponent } from './languages-list/languages-list.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { RouterModule } from '@angular/router';
 
-const components: any[] = [AboutMeComponent, LanguagesListComponent, NavbarComponent];
+const components: any[] = [AboutMeComponent, NavbarComponent];
 
 @NgModule({
   declarations: [...components],

@@ -5,4 +5,27 @@
   height: 100%;
   padding: 10px;
   width: 100%;
+
+  .section {
+    max-width: 1040px;
+    width: 100%;
+
+    &-content {
+      display: flex;
+      justify-content: center;
+
+      > div {
+        padding-left: 30px;
+        padding-right: 30px;
+      }
+
+      .col-1 {
+        width: 58%;
+      }
+
+      .col-2 {
+        width: 42%;
+      }
+    }
+  }
 }

@@ -7,5 +7,11 @@
     },
     "home": {
         "welcome": "Hi, I am"
+    },
+    "resume": {
+        "certificates": "Certificates",
+        "languages": "Languages",
+        "skills": "Skills",
+        "work_history": "Work History"
     }
 }

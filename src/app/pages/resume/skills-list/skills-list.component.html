@@ -1,5 +1,7 @@
-<p>skills-list works!</p>
+<h2 class="text-uppercase section-content-title">
+  {{ 'resume.skills' | translate }}
+</h2>
 
-<div *ngFor="let skill of skills; trackBy: trackBy">
+<div *ngFor="let skill of skills; trackBy: trackBy" class="skills-item">
   {{ skill.name }}
 </div>
