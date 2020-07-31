@@ -1,0 +1,45 @@
+@import '_variables';
+
+:host {
+  form {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    .row-name {
+      width: 100%;
+    }
+
+    .form-control {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+    }
+
+    .submit-button {
+      background-color: $accent-color;
+      border: 0;
+      color: $accent-text-color;
+      margin-top: 20px;
+      max-width: $breakpoint-sm/2;
+      padding: 10px;
+      width: 100%;
+    }
+  }
+
+  @media screen and (min-width: $breakpoint-md) {
+    .row-name {
+      display: flex;
+
+      .form-control {
+        margin-left: 20px;
+        width: 50%;
+
+        &:first-child {
+          margin-left: 0;
+        }
+      }
+    }
+  }
+}

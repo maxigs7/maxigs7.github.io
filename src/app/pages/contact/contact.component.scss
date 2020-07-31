@@ -1,7 +1,23 @@
 :host {
+  align-items: center;
   display: flex;
   flex-direction: column;
   height: 100%;
   padding: 10px;
   width: 100%;
+
+  .social-items {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+
+    app-social-item {
+      margin-bottom: 0.9rem;
+      margin-left: 1rem;
+
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+  }
 }

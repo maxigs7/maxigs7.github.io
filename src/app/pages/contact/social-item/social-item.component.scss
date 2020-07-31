@@ -1,0 +1,23 @@
+@import '_variables';
+
+:host {
+  a {
+    align-items: center;
+    color: $app-text-color;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+
+    .mdi {
+      align-items: center;
+      background-color: $accent-color;
+      border-radius: 50%;
+      color: $accent-text-color;
+      display: flex;
+      font-size: 1.8rem;
+      height: 50px;
+      justify-content: center;
+      width: 50px;
+    }
+  }
+}

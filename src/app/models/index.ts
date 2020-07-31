@@ -4,3 +4,4 @@ export * from './language.interface';
 export * from './multilingual.interface';
 export * from './profile.interface';
 export * from './skill.interface';
+export * from './url.interface';

@@ -4,7 +4,13 @@
     <h1 class="text-lowercase">{{ 'menu.contact' | translate }}</h1>
   </div>
 
-  <div class="section-content text-center">
-    <h2>COMING SOON</h2>
+  <div class="section-content" *ngIf="profile$ | async as profile">
+    <div class="social-items">
+      <app-social-item [item]="profile.facebook" icon="mdi-facebook"></app-social-item>
+      <app-social-item [item]="profile.linkedin" icon="mdi-linkedin"></app-social-item>
+      <app-social-item [item]="profile.skype" icon="mdi-skype"></app-social-item>
+    </div>
+
+    <app-contact-form></app-contact-form>
   </div>
 </section>

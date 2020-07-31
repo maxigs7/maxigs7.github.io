@@ -1,0 +1,29 @@
+<form novalidate [formGroup]="form">
+  <div class="row-name">
+    <div class="form-control">
+      <label for="firstName">First Name</label>
+      <input type="text" formControlName="firstName" class="form-input" />
+    </div>
+    <div class="form-control">
+      <label for="lastName">Last Name</label>
+      <input type="text" formControlName="lastName" class="form-input" />
+    </div>
+  </div>
+
+  <div class="form-control">
+    <label for="email">Email</label>
+    <input type="email" formControlName="email" class="form-input" />
+  </div>
+
+  <div class="form-control">
+    <label for="subject">Subject</label>
+    <input type="text" formControlName="subject" class="form-input" />
+  </div>
+
+  <div class="form-control">
+    <label for="description">Description</label>
+    <textarea formControlName="description" class="form-input" rows="4"></textarea>
+  </div>
+
+  <button type="submit" class="submit-button text-uppercase" (click)="submit()">Submit</button>
+</form>
