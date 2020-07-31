@@ -1,20 +1,28 @@
 {
-    "menu": {
-        "home": "Home",
-        "about": "About me",
-        "resume": "Resume",
-        "contact": "Contact me"
-    },
-    "home": {
-        "welcome": "Hi, I am"
-    },
-    "resume": {
-        "certificates": "Certificates",
-        "languages": "Languages",
-        "skills": "Skills",
-        "work_history": "Work History"
-    },
-    "experience": {
-        "responsabilities": "Responsabilities"
-    }
+  "menu": {
+    "home": "Home",
+    "about": "About me",
+    "resume": "Resume",
+    "contact": "Contact me"
+  },
+  "home": {
+    "welcome": "Hi, I am"
+  },
+  "resume": {
+    "certificates": "Certificates",
+    "languages": "Languages",
+    "skills": "Skills",
+    "work_history": "Work History"
+  },
+  "experience": {
+    "responsabilities": "Responsabilities"
+  },
+  "contact": {
+    "first_name": "First Name",
+    "last_name": "Last Name",
+    "email": "Email",
+    "subject": "Subject",
+    "description": "Message",
+    "submit": "Submit"
+  }
 }

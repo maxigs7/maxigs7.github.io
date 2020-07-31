@@ -1,20 +1,28 @@
 {
-    "menu": {
-        "home": "Inicio",
-        "about": "Acerca de mi",
-        "resume": "CV",
-        "contact": "Contactame"
-    },
-    "home": {
-        "welcome": "Hola, soy"
-    },
-    "resume": {
-        "certificates": "Certificados",
-        "languages": "Idiomas",
-        "skills": "Skills",
-        "work_history": "Experiencia Laboral"
-    },
-    "experience": {
-        "responsabilities": "Responsabilidades"
-    }
+  "menu": {
+    "home": "Inicio",
+    "about": "Acerca de mi",
+    "resume": "CV",
+    "contact": "Contactame"
+  },
+  "home": {
+    "welcome": "Hola, soy"
+  },
+  "resume": {
+    "certificates": "Certificados",
+    "languages": "Idiomas",
+    "skills": "Skills",
+    "work_history": "Experiencia Laboral"
+  },
+  "experience": {
+    "responsabilities": "Responsabilidades"
+  },
+  "contact": {
+    "first_name": "Nombre",
+    "last_name": "Apellido",
+    "email": "Email",
+    "subject": "Asunto",
+    "description": "Mensaje",
+    "submit": "enviar"
+  }
 }

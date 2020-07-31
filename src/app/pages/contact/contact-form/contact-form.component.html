@@ -1,29 +1,31 @@
 <form novalidate [formGroup]="form">
   <div class="row-name">
     <div class="form-control">
-      <label for="firstName">First Name</label>
+      <label for="firstName">{{ 'contact.first_name' | translate }}</label>
       <input type="text" formControlName="firstName" class="form-input" />
     </div>
     <div class="form-control">
-      <label for="lastName">Last Name</label>
+      <label for="lastName">{{ 'contact.last_name' | translate }}</label>
       <input type="text" formControlName="lastName" class="form-input" />
     </div>
   </div>
 
   <div class="form-control">
-    <label for="email">Email</label>
+    <label for="email">{{ 'contact.email' | translate }}</label>
     <input type="email" formControlName="email" class="form-input" />
   </div>
 
   <div class="form-control">
-    <label for="subject">Subject</label>
+    <label for="subject">{{ 'contact.subject' | translate }}</label>
     <input type="text" formControlName="subject" class="form-input" />
   </div>
 
   <div class="form-control">
-    <label for="description">Description</label>
+    <label for="description">{{ 'contact.description' | translate }}</label>
     <textarea formControlName="description" class="form-input" rows="4"></textarea>
   </div>
 
-  <button type="submit" class="submit-button text-uppercase" (click)="submit()">Submit</button>
+  <button type="submit" class="submit-button text-uppercase" (click)="submit()">
+    {{ 'contact.submit' | translate }}
+  </button>
 </form>
