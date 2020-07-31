@@ -69,7 +69,7 @@ $menu-item-height: 100px;
 
     .language-selector {
       display: flex;
-      justify-content: start;
+      justify-content: flex-start;
 
       &-item {
         cursor: pointer;
