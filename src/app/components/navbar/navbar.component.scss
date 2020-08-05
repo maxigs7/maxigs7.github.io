@@ -33,7 +33,7 @@ $menu-item-height: 100px;
     width: $navbar-height;
   }
 
-  .brand-name {
+  .brand-name-mobile {
     display: block;
     font-size: 0.9rem;
     letter-spacing: 0;
@@ -65,6 +65,11 @@ $menu-item-height: 100px;
       background-color: $accent-color;
       color: $accent-text-color;
       margin: 0;
+      width: 100%;
+
+      &-image {
+        width: 100%;
+      }
     }
 
     .language-selector {
@@ -121,7 +126,7 @@ $menu-item-height: 100px;
     height: 100%;
     width: $navbar-width;
 
-    > .brand-name,
+    > .brand-name-mobile,
     > .navbar-toggle {
       display: none;
     }
@@ -131,7 +136,6 @@ $menu-item-height: 100px;
 
       .brand-name {
         display: block;
-        font-size: 1.2rem;
       }
     }
   }
